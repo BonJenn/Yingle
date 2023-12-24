@@ -1,9 +1,9 @@
 import React from 'react'
 import './Post.css'
-import Comment from '../../img/comment.png'
-import Share from '../../img/share.png'
-import Heart from '../../img/like.png'
-import NotLike from '../../img/notlike.png'
+import Comment from '../../../../img/comment.png'
+import Share from '../../../../img/share.png'
+import Heart from '../../../../img/like.png'
+import NotLike from '../../../../img/notlike.png'
 
 const Post = ({data}) => {
     return (
