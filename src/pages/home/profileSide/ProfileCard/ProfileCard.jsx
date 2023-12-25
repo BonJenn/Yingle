@@ -41,9 +41,7 @@ const ProfileCard = () => {
                         <span>3</span>
                         <span>Posts</span>
                     </div>
-                    <span>
-                        My Profile
-                    </span>
+                 
                     </> 
                     
                 )}
@@ -51,10 +49,9 @@ const ProfileCard = () => {
                 </div>
                 <hr />
             </div>
+            {ProfilePage? '': <span>My Profile</span> }
 
-            <span>
-                My Profile
-            </span>
+           
         </div>
     )
 }
