@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import AuthRoute from './Routes/AuthRoute.js'
+import UserRoute from './Routes/UserRoute.js'
+
 
 //Routes
 
@@ -21,3 +23,4 @@ mongoose.connect(process.env.MONGO_DB, {useNewUrlParser: true, useUnifiedTopolog
 
 // usage of routes 
 app.use('/auth', AuthRoute)
+app.use('/user', UserRoute )
