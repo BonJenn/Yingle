@@ -68,3 +68,24 @@ export const deleteUser = async ( req, res ) => {
      res.status(403).json("Access Denied! you can only delete your own profile")
     }
 };
+
+// Follow a user
+export const followUser = async (req, res) => {
+    const id = req.params.id
+
+    const {currentUserId} = req.body
+
+    if (currentUserId === id)
+    {
+        res.status(403).json("Action forbidden")
+    }
+    else{
+        try {
+            const followUser= UserModel.findById(followUser)
+            const followingUser = UserModel.findById(currentUserId)
+
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+}
