@@ -1,0 +1,263 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Social Media",
+    "dateExported": "2024-01-02T07:33:50.946Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "9e2263b6-964b-4df4-892d-22e74cf62a38",
+            "name": "User Request",
+            "containerId": "",
+            "created": "2023-12-31T00:09:47.854Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "a91e88dd-6f53-4300-8740-991c7f3174b4",
+            "name": "Auth Requests",
+            "containerId": "",
+            "created": "2023-12-31T00:09:56.115Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "183ff05a-abbc-4c2f-bb86-ba67701bfb4b",
+            "name": "Post Request",
+            "containerId": "",
+            "created": "2024-01-02T04:28:28.364Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d8fe388f-ff19-47b4-9161-b559d35cdd12",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "a91e88dd-6f53-4300-8740-991c7f3174b4",
+            "name": "Login User",
+            "url": "localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-30T23:41:00.420Z",
+            "modified": "2023-12-31T06:46:10.655Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"abel@theweeknd.com\",\n  \"password\": \"youwillneverknow64\"\n} ",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cd2f67da-1c54-4172-b3a9-c1eea2251f52",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "9e2263b6-964b-4df4-892d-22e74cf62a38",
+            "name": "Get User",
+            "url": "localhost:3000/user/6591075162ad319115f62d8c",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-12-31T00:10:15.990Z",
+            "modified": "2023-12-31T06:21:12.926Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0cf2c5d7-eeea-4d51-927c-2cc61a4929cd",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "9e2263b6-964b-4df4-892d-22e74cf62a38",
+            "name": "Update User",
+            "url": "localhost:3000/user/658e1f2b62ad319115f62d88",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-12-31T00:43:52.579Z",
+            "modified": "2023-12-31T03:54:30.979Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"currentUserId\": \"658e1f2b62ad319115f62d82\",\n  \"username\": \"bonjennproject@gmail.com\",\n  \"firstname\": \"Jennifer\",\n  \"currentUserAdminStatus\": true,\n  \"password\": \"RyanTheCat1!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a660855e-cfba-46e3-b731-1f2d382b2eaa",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "9e2263b6-964b-4df4-892d-22e74cf62a38",
+            "name": "Delete User",
+            "url": "localhost:3000/user/658e1f2b62ad319115f62d88",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-12-31T03:59:26.867Z",
+            "modified": "2023-12-31T04:54:33.705Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"currentUserId\": \"658e1f2b62ad319115f62d88\",\n  \"currentUserAdminStatus\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4dfc1f84-71a2-42f6-962c-6d16a42ba1b4",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "a91e88dd-6f53-4300-8740-991c7f3174b4",
+            "name": "Register User",
+            "url": "localhost:3000/auth/register",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-12-31T06:39:25.040Z",
+            "modified": "2024-01-02T06:54:09.410Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"braad@gmail.com\",\n  \"password\": \"youwillneverknow64\",\n  \"firstname\":\"B\",\n  \"lastname\": \"Raad\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2200652f-4306-409a-bb15-78f9ed44b266",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "9e2263b6-964b-4df4-892d-22e74cf62a38",
+            "name": "Follow User",
+            "url": "localhost:3000/user/6593b3118465d1f2ab207502/follow",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-01-01T04:12:56.722Z",
+            "modified": "2024-01-02T06:55:48.531Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"currentUserId\": \"6593b2df8465d1f2ab207500\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5adffa14-88ca-4971-a35c-6c1ed42b4142",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "9e2263b6-964b-4df4-892d-22e74cf62a38",
+            "name": "Unfollow User",
+            "url": "localhost:3000/user/659241a42c7d0d343482d967/unfollow",
+            "method": "PUT",
+            "sortNum": 110000,
+            "created": "2024-01-02T04:02:39.460Z",
+            "modified": "2024-01-02T04:12:07.788Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"currentUserId\": \"659241e1e0b31cdb53a26016\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a03a350-2fe7-40bf-b45d-b975f62c3b20",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "183ff05a-abbc-4c2f-bb86-ba67701bfb4b",
+            "name": "Create Post",
+            "url": "localhost:3000/post/",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-01-02T04:28:36.787Z",
+            "modified": "2024-01-02T07:13:50.175Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": \"6593b3118465d1f2ab207502\",\n  \"description\": \"This is my second post!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a531cb41-7131-4303-85a4-41db9a04e739",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "183ff05a-abbc-4c2f-bb86-ba67701bfb4b",
+            "name": "Get a Post",
+            "url": "localhost:3000/post/659392be6df7f3e7b470033b",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-01-02T04:38:52.425Z",
+            "modified": "2024-01-02T04:59:38.188Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "837f39fc-0818-45b1-a44e-ee3e59b266d6",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "183ff05a-abbc-4c2f-bb86-ba67701bfb4b",
+            "name": "Update Post",
+            "url": "localhost:3000/post/6593a55b442d9a6e1237bf7c",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-01-02T05:05:26.841Z",
+            "modified": "2024-01-02T06:14:33.035Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": \"659241a42c7d0d343482d967\",\n  \"description\": \"This is another test \"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "79f67cc0-4bbd-448e-8fd3-10bb881bc79a",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "183ff05a-abbc-4c2f-bb86-ba67701bfb4b",
+            "name": "Delete a Post",
+            "url": "localhost:3000/post/659392be6df7f3e7b470033b",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2024-01-02T05:13:17.134Z",
+            "modified": "2024-01-02T05:17:12.528Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": \"659241a42c7d0d343482d967\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5d93429d-1243-4cde-b406-f060f257475f",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "183ff05a-abbc-4c2f-bb86-ba67701bfb4b",
+            "name": "Like a Post",
+            "url": "localhost:3000/post/65939d50e13c726db2b08741/like",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2024-01-02T05:53:50.718Z",
+            "modified": "2024-01-02T06:16:00.618Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": \"6591075162ad319115f62d8c\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "def563d0-ab86-444d-a7a0-5bb5a7f9859d",
+            "colId": "363ab88e-15e4-4d44-ba01-d083bcaef2dd",
+            "containerId": "183ff05a-abbc-4c2f-bb86-ba67701bfb4b",
+            "name": "Get Timeline Posts",
+            "url": "localhost:3000/post/6593b2df8465d1f2ab207500/timeline",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2024-01-02T07:11:17.295Z",
+            "modified": "2024-01-02T07:13:09.440Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
