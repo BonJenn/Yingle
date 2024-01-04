@@ -6,7 +6,7 @@ import cors from 'cors';
 import AuthRoute from './Routes/AuthRoute.js'
 import UserRoute from './Routes/UserRoute.js'
 import PostRoute from './Routes/PostRoute.js'
-import UploadRoute from './Routes/UploadRoute,js'
+import UploadRoute from './Routes/UploadRoute.js' // Fixed the typo here
 
 
 //Routes

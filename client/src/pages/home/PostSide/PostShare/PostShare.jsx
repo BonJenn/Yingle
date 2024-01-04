@@ -7,7 +7,7 @@ import { UilPlayCircle } from "@iconscout/react-unicons";
 import { UilLocationPoint } from "@iconscout/react-unicons";
 import { UilSchedule } from "@iconscout/react-unicons";
 import { UilTimes } from "@iconscout/react-unicons";
-import { uploadImage } from "../../../../actions/uploadAction";
+import { uploadImage, uploadPost } from "../../../../actions/uploadAction";
 
 const PostShare = () => {
     const [image, setImage] = useState(null)
@@ -44,6 +44,7 @@ const PostShare = () => {
                 console.log(error)
             }
          }
+         dispatch(uploadPost(newPost))
     }
     return (
         <div className="PostShare">
