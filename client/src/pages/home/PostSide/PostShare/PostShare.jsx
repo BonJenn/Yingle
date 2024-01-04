@@ -10,6 +10,7 @@ import { UilTimes } from "@iconscout/react-unicons";
 import { uploadImage, uploadPost } from "../../../../actions/uploadAction";
 
 const PostShare = () => {
+    const loading = useSelector((state)=>state.postReducer.uploading)
     const [image, setImage] = useState(null)
     const imageRef = useRef()
     const dispatch = useDispatch()
@@ -22,7 +23,10 @@ const PostShare = () => {
         }
     }
 
-
+    const reset = ()=> {
+        setImage(null);
+        description.current.value=""
+    }
     const handleSubmit =(e)=> {
         e.preventDefault();
 
@@ -45,6 +49,7 @@ const PostShare = () => {
             }
          }
          dispatch(uploadPost(newPost))
+         reset()
     }
     return (
         <div className="PostShare">
@@ -82,9 +87,11 @@ const PostShare = () => {
                     </div>
                     <button className="button ps-button"
                     onClick={handleSubmit}
+                    disabled={loading}
 
 
-                    >Share
+                    >
+                        {loading? "Uploading..." :"Share"}
                     </button>
                     <div style={{display: "none"}}>
                         <input type="file" name="myImage" ref={imageRef} onChange={onImageChange} />  
