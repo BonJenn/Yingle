@@ -27,7 +27,7 @@ const PostShare = () => {
         setImage(null);
         description.current.value=""
     }
-    const handleSubmit =(e)=> {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const newPost = {
@@ -35,21 +35,20 @@ const PostShare = () => {
             description: description.current.value
         }
 
-        if(image){
+        if (image) {
             const data = new FormData()
-            const filename = Date.now() + image.name; // Corrected here
+            const filename = Date.now() + image.name;
             data.append("name", filename)
-            data.append("file", image) // Corrected here
+            data.append("file", image)
             newPost.image = filename;
-            console.log(newPost)
             try {
-                dispatch(uploadImage(data))
+                await dispatch(uploadImage(data))
             } catch (error) {
                 console.log(error)
             }
-         }
-         dispatch(uploadPost(newPost))
-         reset()
+        }
+        dispatch(uploadPost(newPost))
+        reset()
     }
     return (
         <div className="PostShare">
