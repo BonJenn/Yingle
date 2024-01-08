@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import Cover from '../../../../img/cover.jpg'
 import Profile from '../../../../img/profileImg.jpg'
+import {Link} from 'react-router-dom'
 import './ProfileCard.css'
 
 const ProfileCard = () => {
@@ -17,20 +18,20 @@ const ProfileCard = () => {
             </div>
 
             <div className="ProfileName">
-                <span>Zendaya MJ</span>
-                <span>Senior UI/UX Designer</span>
+                <span>{user.firstname} {user.lastname}</span>
+                <span>{user.worksAt? user.worksAt: "Write about yourself"}</span>
             </div>
 
             <div className="followStatus">
                 <hr />
                 <div>
                     <div className="follow">
-                        <span>6,8900</span>
-                        <span>Followings</span>
+                        <span>{user.following.length}</span>
+                        <span>Following</span>
                     </div>
                     <div className='vl'></div>
                     <div className="follow">
-                        <span>1</span>
+                        <span>{user.followers.length}</span>
                         <span>Followers</span>
                     </div>
                 
@@ -51,11 +52,15 @@ const ProfileCard = () => {
                 </div>
                 <hr />
             </div>
-            {ProfilePage? '': <span>My Profile</span> }
-
-           
+            {ProfilePage ? '' : (
+                <span>
+                    <Link style={{textDecoration: "none", color: "inhereit" }} to={`/profile/${user._id}`}>
+                        My Profile
+                    </Link>
+                </span>
+            )}
         </div>
-    )
-}
+    );
+};
 
 export default ProfileCard
