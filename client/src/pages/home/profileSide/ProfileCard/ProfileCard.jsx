@@ -5,11 +5,10 @@ import Profile from '../../../../img/profileImg.jpg'
 import {Link} from 'react-router-dom'
 import './ProfileCard.css'
 
-const ProfileCard = () => {
+const ProfileCard = ({location}) => {
     const {user} = useSelector((state)=>state.authReducer.authData)
-
-    const ProfilePage = false;
-    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
+    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+    
     return (
         <div className="">
             <div className="ProfileImages">
@@ -35,7 +34,7 @@ const ProfileCard = () => {
                         <span>Followers</span>
                     </div>
                 
-                {ProfilePage && (
+                {location === 'profilePage' && (
                     <>
                     <div className="vl">
 
@@ -52,7 +51,7 @@ const ProfileCard = () => {
                 </div>
                 <hr />
             </div>
-            {ProfilePage ? '' : (
+            {location === 'profilelPage' ? '' : (
                 <span>
                     <Link style={{textDecoration: "none", color: "inhereit" }} to={`/profile/${user._id}`}>
                         My Profile
