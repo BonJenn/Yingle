@@ -5,6 +5,7 @@ import {UilPen} from '@iconscout/react-unicons';
 import {useDispatch, useSelector} from "react-redux";
 import { useParams } from 'react-router-dom';
 import * as UserApi from '../../../../api/UserRequest.js'
+import { logout } from '../../../../actions/AuthAction.js'; // Corrected this line
 
 const InfoCard = () => {
     const [modalOpened , setModalOpened] = useState(false);
@@ -34,14 +35,18 @@ const InfoCard = () => {
         fetchProfileUser();
     }, [user]) // Added comma here
 
+    const handleLogOut = () => {
+        dispatch(logout()) // Modified this line
+    }
     return (
         <div className="InfoCard">
             <div className="InfoHead">
                 <h4>Profile Info</h4>
-                <div>
+                {user._id === profileUserId ? (<div>
                 <UilPen width='2rem' height='1.2rem' onClick={()=>setModalOpened(true)}/>
-                <ProfileModal modalOpened={modalOpened} setModalOpened={setModalOpened}/>
-                </div>
+                <ProfileModal modalOpened={modalOpened} setModalOpened={setModalOpened} data = {user}/>
+                </div>) : ("")}
+                
                 
             </div>
     
@@ -49,24 +54,24 @@ const InfoCard = () => {
                 <span>
                     <b>Status </b>
                 </span>
-                <span>in Relationship</span>
+                <span>{profileUser.relationship}</span>
             </div>
 
             <div className="info">
                 <span>
                     <b>Lives in </b>
                 </span>
-                <span>Multan</span>
+                <span>{profileUser.livesin}</span>
             </div>
 
             <div className="info">
                 <span>
                     <b>Works at </b>
                 </span>
-                <span>Omegle</span>
+                <span>{profileUser.worksAt}</span>
             </div>
 
-            <button className="button logout-button">Logout</button> {/* Changed class to className */}
+            <button className="button logout-button" onClick={handleLogOut}>Logout</button> {/* Changed class to className */}
         </div>
     )
 }
